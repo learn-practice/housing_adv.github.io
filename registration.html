@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body class="registration">
+  <form action="registration.php" method="post" enctype="multipart/form-data" onsubmit="return validation()" name="myform">
+    <div class="info">
+      <h2>house information</h2>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter Your Name" autofocus required><br><br>
+      
+    <label for="address">address</label>
+    <input type="text" id="address" name="address" placeholder="Enter Address of Property"required><br><br>
+     
+    <label for="city">city</label>
+    <input type="text" id="city" name="city" placeholder="Enter the city"required><br><br>
+
+    <label for="price">price</label>
+    <input type="text" id="price" name="price" placeholder="Enter Price Of Property"required><br><br>
+     
+    <label for="size">area</label>
+    <input type="text" id="size" name="size" placeholder="Enter the area of Property "required><br><br>
+
+    <label for="img">Select image:</label>
+    <input type="file" id="img" name="img" accept="image/*" required><br><br>
+
+    <label for="category">category</label>
+        <select name="category" id="category">
+            <option value="flat">Flat</option>
+            <option value="ploat">ploat</option>
+            <option value="banglo">Banglo</option>
+            <option value="car">Car</option>
+            <option value="other">Other</option>
+            
+        </select><br><br>
+
+        <label for="status">Status</label>
+        <select name="status" id="status">
+            <option value="on sale">On Sale</option>
+            <option value="on rent">On Rent</option>
+            
+        </select>
+        <br><br>
+        <label for="description">description</label >
+        <input type="text" id="description" name="description" placeholder="Enter Description Of Property"required><br><br>
+        
+        <h3>contact information</h3>
+        <label for="contact">mobile number</label> 
+        <input type="text" id="contact" name="contact" placeholder="Enter contact number" required><br><br>
+        <label for="email">email</label>
+        <input type="email" id="email" name="email" placeholder="Enter Email Address" required><br><br>
+      
+        <div class="button">
+        <input type="submit" value="Registor" name="submit">
+      </div>
+    </div>
+</form>
+ 
+<!-- form validation -->
+
+<script type="text/javascript">
+  function validation()
+    {
+     var username=document.forms["myform"]["name"].value;
+     var address=document.forms["myform"]["address"].value;
+     var description=document.forms["myform"]["description"].value;
+     var phoneNo=document.forms["myform"]["contact"].value;
+
+     if(username =="")
+       {
+         alert("please enter your name");
+          // form_val.username.focus();
+          return false;
+       }
+    if(username.length<10)
+      {
+       alert("name must be at least of 10 characters.");
+      //   form_val.username.focus();
+          return false;
+      }
+   if(description.length < 15)
+     {
+         alert("description must have atleast 15 charecter");
+          // form_val.password.focus();
+          return false;
+       }
+    if(address =="")
+      {
+       alert("please enter your address");
+      //   form_val.password.focus();
+          return false;
+      }
+      if(address.length<10)
+      {
+       alert("address must be at least of 10 characters.");
+      //   form_val.password.focus();
+          return false;
+      }
+      if(phoneNo =="")
+      {
+       alert("please enter your phone number.");
+      //   form_val.password.focus();
+          return false;
+      }
+      if(phoneNo.length!=10)
+      {
+       alert("phone number have 10 digits.");
+      //   form_val.password.focus();
+          return false;
+      }
+      
+     return true
+   }
+</script>
+
+</body>
+</html>

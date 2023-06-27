@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <!-- <div class="wraper">
+    <div class="bigbox">
+    <div class="box">
+        
+        <ol>
+        <li> <img src='<?php print("$row[5]");?>' alt="image not aploaded">
+        </li>
+        
+       <li>size : <?php echo("$row[4]");?></li>
+    
+       
+       <li>address : <?php echo("$row[1]");?> ,</li>
+       <li><?php echo("$row[2]");?></li>
+       <li id="price">price : <?php echo("$row[3]");?></li>
+        <img src='<?php print("$row[4]");?>' alt="image not found"> -->
+       
+        <li>category:<?php echo("$row[6]");?></li>
+       
+        <li>discription:<?php echo("$row[8]");?></li>
+        <h4>contact Information</h4>
+        <li>name of the owner: <?php echo("$row[0]");?></li>
+        <li>contact:<?php echo("$row[9]");?></li>
+        <li>email:<?php echo("$row[10]");?></li>
+        <li class="btn"><?php echo("$row[7]");?></li>
+     </ol>
+     </div>
+  </div>
+  </div>
+ </div>
+ <div class="box">
+     <img src='<?php print("$row[4]");?>' alt="image not found">
+    <h1> <?php echo("$row[0]");?></h1><br>
+    <h4><?php echo("$row[1]");?></h4><br>
+    <h4><?php echo("$row[2]");?></h4><br>
+    <h4 id="price"><?php echo("$row[3]");?></h4><br>
+    <!-- <img src='<?php print("$row[4]");?>' alt="image not found"> -->
+    <h4><?php echo("$row[5]");?></h4>
+    <h4><?php echo("$row[6]");?></h4>
+    <h4><?php echo("$row[7]");?></h4>
+    <h4><?php echo("$row[8]");?></h4>
+    <h4><?php echo("$row[9]");?></h4>
+    <h4><?php echo("$row[10]");?></h4>
+    </div> -->
+   
+   <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>signup page</title>
+       <link rel="stylesheet" href="style3.css">
+   </head>
+   <body>
+   <form action="sign_to.php" method="post">
+           <div class="sign-page">
+           <h1> sign up</h1>
+               <div class="signup">
+                   <div class="username">
+                       <label for="username">Username </label><br><br>
+                       <input type="text" name="username" id="username" placeholder="Username" autofocus><br><br>
+                   </div>
+                   <div class="password">
+                       <label for="password">Password </label><br><br>
+                       <input type="password" name="password" id="password" >
+                   </div>
+                   <div class="confirm-password">
+                       <label for="confirm-password">Confirm Password </label><br><br>
+                       <input type="password" name="confirm-password" id="confirm-password" >
+                   </div>
+               </div>
+                   <div class="button">
+                   <input type="submit" value="sign up">
+                  </div>
+           </div>
+           </form>
+   
+</body>
+</html>

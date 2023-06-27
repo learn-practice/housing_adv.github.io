@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <form action="signup.php" method="post"  onsubmit="return validation()" name="myform">
+        <div class="sign-page">
+        <h1> Sing Up</h1>
+            <div class="signup">
+            <div class="name">
+                <label for="name"> Full Name</label><br>
+                <input type="text" name="name" id="name" placeholder="enter your name" autofocus required>
+                 
+            </div>
+            <div class="email-address">
+                <label for="email-address">email </label><br>
+                <input type="email" name="email-address" id="email-address" required >
+                
+            </div>
+            <div class="address">
+                <label for="address">Address</label><br>
+                <input type="text" name="address" id="address" required>
+                
+            </div>
+            <div class="birth-date"> 
+                <label for="birth-date">Birth Date</label><br>
+                <input type="date" name="birth-date" id="birth-date" required>
+                
+            </div>
+            
+            <div class="phone-no">
+                <label for="phone-no">Mobile number</label><br>
+                <input type="text" name="phone-no" id="phone-no" required >
+                
+            </div>
+        </div>
+            <div class="button">
+            <input type="submit" value="next" name="submit">
+            <input type="reset" value="reset">
+            </div>
+        </div>
+        </form>
+        <script type="text/javascript">
+            function validation()
+              {
+               var username=document.forms["myform"]["name"].value;
+               var email=document.forms["myform"]["email-address"].value;
+               var address=document.forms["myform"]["address"].value;
+               var birthDate=document.forms["myform"]["birth-date"].value;
+               var phoneNo=document.forms["myform"]["phone-no"].value;
+
+               if(username =="")
+                 {
+                   alert("please enter your name");
+                    // form_val.username.focus();
+                    return false;
+                 }
+              if(username.length<10)
+                {
+                 alert("name must be at least of 10 characters.");
+                //   form_val.username.focus();
+                    return false;
+                }
+             if(email =="")
+               {
+                   alert("please enter your email.");
+                    // form_val.password.focus();
+                    return false;
+                 }
+              if(address =="")
+                {
+                 alert("please enter your address");
+                //   form_val.password.focus();
+                    return false;
+                }
+                if(address.length<10)
+                {
+                 alert("address must be at least of 10 characters.");
+                //   form_val.password.focus();
+                    return false;
+                }
+                if(phoneNo =="")
+                {
+                 alert("please enter your phone number.");
+                //   form_val.password.focus();
+                    return false;
+                }
+                if(phoneNo.length !=10)
+                {
+                 alert("phone number have 10 digits.");
+                //   form_val.password.focus();
+                    return false;
+                }
+                
+               return true
+             }
+          </script>
+     
+</body>
+</html>

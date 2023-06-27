@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="login_to.php" method="post" onsubmit="return validation()" name="myform">
+        <div class="login-page">
+        <h1> login</h1>
+            <div class="login">
+                <div class="email-address">
+                    <label for="email-add">Username </label><br><br>
+                    <input type="text" name="email-add" id="email-add" placeholder="Username" autofocus required><br><br>
+                </div>
+                <div class="email-password">
+                    <label for="login-password">Password </label><br><br>
+                    <input type="password" name="login-password" id="login-password" placeholder="password" required>
+                </div>
+            </div>
+                <div class="button">
+                <input type="submit" value="login">
+                <button><a href="signup.html">sign up</a></button>
+               </div>
+        </div>
+        </form>
+         <!-- JavaScript code  -->
+   <script type="text/javascript">
+    function validation()
+      {
+       var username=document.forms["myform"]["email-add"].value;
+       var password=document.forms["myform"]["login-password"].value;
+       if(username =="")
+         {
+           alert("please enter your username frist.");
+            // form_val.username.focus();
+            return false;
+         }
+      if(username.length<6)
+        {
+         alert("username must be at least of 6 characters.");
+        //   form_val.username.focus();
+            return false;
+        }
+     if(password =="")
+       {
+           alert("please enter your password.");
+            // form_val.password.focus();
+            return false;
+         }
+      if(password.length<6)
+        {
+         alert("password must be at least of 6 characters.");
+        //   form_val.password.focus();
+            return false;
+        }
+       return true
+     }
+  </script>
+</body>
+</html>
